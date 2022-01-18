@@ -14,7 +14,7 @@ export default function HomeScreen({navigation}){
     var price ='';
 
     useEffect(() => {
-        fetch('http://192.168.1.17:1337/events',
+        fetch('http://192.168.1.168:1337/events',
         {
             method: "GET",
             headers: {
@@ -80,7 +80,7 @@ export default function HomeScreen({navigation}){
                             />
                             <View style={styles.image}>
                                 <View style={styles.image_overlay}></View>
-                                <Image style={styles.image} source={{uri:'http://192.168.1.17:1337' + event.image['url'] }} />
+                                <Image style={styles.image} source={{uri:'http://192.168.1.168:1337' + event.image['url'] }} />
                             </View>
                             
 
