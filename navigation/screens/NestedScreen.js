@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
 import {useEffect, useState} from 'react'
 
 export default function NestedScreen({route, navigation }) {
@@ -9,7 +9,7 @@ export default function NestedScreen({route, navigation }) {
     
 
     useEffect(() => {
-        fetch('http://192.168.1.17:1337/events/' + eventid,
+        fetch('http://10.2.162.139:1337/events/' + eventid,
         {
             method: "GET",
             headers: {
@@ -24,24 +24,38 @@ export default function NestedScreen({route, navigation }) {
         })
     },[])
 
+
     
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            
+        
+        <View style={{flex: 1}}>
                 {isLoading ? 
                     <View>
-                        <Text style={{ fontSize: 26, fontWeight: 'bold' }}>{event.title}</Text>
-                        <Text>Axe : {event.axe}</Text> 
-                        <Text>Date : {event.date}</Text> 
-                        <Text>Location : {event.location}</Text>
-                        <Image style={styles.image} source={{uri:'http://192.168.1.17:1337' + event.image['url'] }} />
-                        <Text>Description : {event.description}</Text> 
+                        <View style={{ backgroundColor: 'rgba(52, 52, 52, 0.8)', alignSelf: 'stretch', height: 200 }}>
+                            <ImageBackground
+                            source={{uri:'http://10.2.162.139:1337' + event.image['url'] }}
+                            style={{width: '100%', height: '100%'}}
+                            > 
+                                <View style={{ flex:1, justifyContent:'flex-end', backgroundColor: 'rgba(52, 52, 52, 0.5)', alignSelf: 'stretch', height: 200 }}>
+                                    <Text style={{ color: "white", fontSize: 26, fontWeight: 'bold' }}>{event.title}</Text>
+                                    <Text style={{ color: "white"}}>{event.date.toString().substring(8,10) + ' ' + event.date.toString().substring(5,7) + ' ' + event.date.toString().substring(0,4) + ' à ' + event.date.toString().substring(11,16)}</Text> 
+                                    <Text style={{ color: "white"}}>{event.axe}</Text> 
+                                </View>
+                            </ImageBackground>
+                        </View>
+
+                        <View style={{}}>
+                            <View style={{}}>
+                            <Text>Location : {event.location}</Text>
+                            </View>
+                            <View style={{}}>
+                            <Text>Prix : {event.price}</Text>
+                            </View>
+                        </View>
+                        <Text>Description : {event.description}</Text>
                         <Text style={styles.news}>News : {event.news}</Text> 
-                        
                     </View>
                 : <Text>Loading...</Text>}
-                
-                
         </View>
         
     );
@@ -49,6 +63,12 @@ export default function NestedScreen({route, navigation }) {
 
     }
     const styles = StyleSheet.create({
+        backgroundImage: {
+            flex: 1,
+            resizeMode: "cover",
+            justifyContent: "center"
+        },
+        
         container: {
         width: 300,
         margin: 20,
@@ -69,9 +89,8 @@ export default function NestedScreen({route, navigation }) {
         },
     
         image: {
-            width: 200, 
-            height: 200,
-            borderRadius: 10,
+            alignSelf: 'stretch',
+            height: 200
         },
 
         news: {
