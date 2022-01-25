@@ -1,11 +1,12 @@
 import React from 'react';
-import {ImageBackground, Image, StyleSheet, Text, TextInput, View, ScrollView } from 'react-native';
+import {ImageBackground, Image, StyleSheet, Text, TextInput, View, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
 
 
 export default function ProfileScreen({ navigation }) {
     return (
-        <View style={styles.profil_container}>
+      <SafeAreaView style={styles.profil_container}>
+        
 
         <ImageBackground style={styles.profil_imgcouverture} source={require('./../../assets/imgprofil/pulv_bg.png')}>
         </ImageBackground>
@@ -14,34 +15,42 @@ export default function ProfileScreen({ navigation }) {
           <Text style={styles.profil_titreP} >Romain FAUSTINI</Text>
           <Text style={styles.profil_textM} >IIM, A1</Text>
           <Text style={styles.profil_textP} >Romaaaain 🇮🇹 Etudiant en première année</Text>
-    
+
+
+          {/*  On créer le block prochain évènement */}
           <View style={styles.profil_block}>
             <Text style={styles.profil_textP} >Prochain(s) évènement(s) :</Text>
     
             <View style={styles.profil_rondgroupe}>
               <View style={styles.profil_rond}></View>
               <View style={styles.profil_rond}></View>
+              <View style={styles.profil_rond}></View>
+              <View style={styles.profil_rondPlus}></View>
             </View>
           </View>
     
-    
+          {/*  On créer le block Evenements passé */}
           <View style={styles.profil_block}>
             <Text style={styles.profil_textP} >Evènement(s) passé(s) : </Text>
     
             <View style={styles.profil_rondgroupe}>
               <View style={styles.profil_rond}></View>
               <View style={styles.profil_rond}></View>
+              <View style={styles.profil_rond}></View>
+              <View style={styles.profil_rondPlus}></View>
             </View>
     
           </View>
     
-    
+          {/*  On créer le block Badges */}
           <View style={styles.profil_block}>
             <Text style={styles.profil_textP} >Badge(s) :</Text>
     
             <View style={styles.profil_rondgroupe}>
               <View style={styles.profil_rond}></View>
               <View style={styles.profil_rond}></View>
+              <View style={styles.profil_rond}></View>
+              <View style={styles.profil_rondPlus}></View>
             </View>
     
           </View>
@@ -53,7 +62,7 @@ export default function ProfileScreen({ navigation }) {
         <View style={styles.profil_profil}>
         </View>
     
-      </View>
+      </SafeAreaView>
     );
 }
 
@@ -63,7 +72,7 @@ export default function ProfileScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   profil_container: {
-    flex: 1
+    flex: 1,
   },
   profil_imgcouverture: {
     position: 'absolute',
@@ -128,26 +137,40 @@ const styles = StyleSheet.create({
     marginBottom: '2%',
     maxWidth: '70%',
   },
+  
   profil_block: {
     color: 'black',
-    minWidth: '70%',
+    width: '70%',
     backgroundColor: 'white',
     height: '20%',
     marginTop:'10%',
-    //border: '3px solid black',
+    // border: '3px solid black',
     borderRadius: 25,
     paddingTop: '2%',
-    paddingLeft: '5%'
+    paddingLeft: '5%',
   },
   profil_rondgroupe: {
-    minWidth: '40%',
+    minWidth: '100%',
+    padding:0,
+    height:100,
+    textAlign: 'center',
+    flexDirection:'row',
+    marginTop:'5%',
   },
 
   profil_rond: {
-    minWidth: '20%',
-    minHeight: '11%',
-    borderRadius:1000,
-    //backgroundColor: 'green',
+    height:'50%',
+    borderRadius: 1000,
+    backgroundColor: 'green',
+    flex: 0.25,
+    marginRight:'5%',
+  },
+  profil_rondPlus: {
+    height:'50%',
+    borderRadius: 1000,
+    backgroundColor: 'red',
+    flex: 0.25,
+    marginRight:'5%',
   },
 
 
