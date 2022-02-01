@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registered_tickets",
+  "info": {
+    "name": "registered_ticket"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "events": {
+      "collection": "events"
+    }
+  }
+}

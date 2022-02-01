@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/registered-tickets",
+      "handler": "registered-ticket.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/registered-tickets/count",
+      "handler": "registered-ticket.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/registered-tickets/:id",
+      "handler": "registered-ticket.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/registered-tickets",
+      "handler": "registered-ticket.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/registered-tickets/:id",
+      "handler": "registered-ticket.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/registered-tickets/:id",
+      "handler": "registered-ticket.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

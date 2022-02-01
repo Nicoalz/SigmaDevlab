@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fav-events",
+      "handler": "fav-event.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fav-events/count",
+      "handler": "fav-event.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fav-events/:id",
+      "handler": "fav-event.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fav-events",
+      "handler": "fav-event.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fav-events/:id",
+      "handler": "fav-event.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fav-events/:id",
+      "handler": "fav-event.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

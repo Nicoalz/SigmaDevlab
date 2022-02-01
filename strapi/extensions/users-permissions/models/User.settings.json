@@ -99,6 +99,13 @@
         "com"
       ],
       "required": true
+    },
+    "registered_events": {
+      "columnName": "Registered",
+      "collection": "events"
+    },
+    "favourites": {
+      "collection": "events"
     }
   }
 }

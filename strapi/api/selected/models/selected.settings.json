@@ -1,0 +1,15 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Selected",
+  "info": {
+    "name": "Registered_event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

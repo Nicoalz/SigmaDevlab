@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fav_events",
+  "info": {
+    "name": "fav_event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
