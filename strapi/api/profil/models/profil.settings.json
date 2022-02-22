@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profils",
+  "info": {
+    "name": "Profil"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pbanniere": {
+      "type": "dynamiczone",
+      "components": [
+        "profil.banniere"
+      ]
+    }
+  }
+}

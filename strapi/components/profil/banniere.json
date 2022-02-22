@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_profil_bannieres",
+  "info": {
+    "name": "banniere",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "pprofil": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

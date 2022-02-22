@@ -22,10 +22,12 @@ export default function ProfileScreen({ navigation }) {
             <Text style={styles.profil_textP} >Prochain(s) évènement(s) :</Text>
     
             <View style={styles.profil_rondgroupe}>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rondPlus}></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/1.png')}></Image></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/2.png')}></Image></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/3.png')}></Image></View>
+              <View style={styles.profil_rondPlus}>
+                <Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/plus.png')}></Image>
+              </View>
             </View>
           </View>
     
@@ -34,10 +36,12 @@ export default function ProfileScreen({ navigation }) {
             <Text style={styles.profil_textP} >Evènement(s) passé(s) : </Text>
     
             <View style={styles.profil_rondgroupe}>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rondPlus}></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/1.png')}></Image></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/2.png')}></Image></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/3.png')}></Image></View>
+              <View style={styles.profil_rondPlus}>
+                <Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/plus.png')}></Image>
+              </View>
             </View>
     
           </View>
@@ -47,10 +51,13 @@ export default function ProfileScreen({ navigation }) {
             <Text style={styles.profil_textP} >Badge(s) :</Text>
     
             <View style={styles.profil_rondgroupe}>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rond}></View>
-              <View style={styles.profil_rondPlus}></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/1.png')}></Image></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/2.png')}></Image></View>
+              <View style={styles.profil_rond}><Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/3.png')}></Image></View>
+
+              <View style={styles.profil_rondPlus}>
+                <Image style={styles.profil_imgautres} source={require('./../../assets/imgprofil/plus.png')}></Image>
+              </View>
             </View>
     
           </View>
@@ -60,6 +67,13 @@ export default function ProfileScreen({ navigation }) {
         <Image />
 
         <View style={styles.profil_profil}>
+          <Image style={styles.profil_imgprofil} source={require('./../../assets/imgprofil/profilpic.jpg')}></Image>
+        </View>
+        <View>
+          <Image style={styles.profil_imgreglages} source={require('./../../assets/imgprofil/parametres.png')}></Image>
+        </View>
+        <View>
+          <Image style={styles.profil_imgloupe} source={require('./../../assets/imgprofil/loupe.png')}></Image>
         </View>
     
       </SafeAreaView>
@@ -73,6 +87,40 @@ export default function ProfileScreen({ navigation }) {
 const styles = StyleSheet.create({
   profil_container: {
     flex: 1,
+  },
+  profil_imgloupe: {
+    position: 'absolute',
+    borderColor:"white",
+    top: 45,
+    left: 340,
+    width: '11%',
+    borderRadius: 1000,
+    height: 45,
+  },
+  profil_imgreglages: {
+    position: 'absolute',
+    borderColor:"white",
+    top: 50,
+    left: 20,
+    width: '9%',
+    borderRadius:1000,
+    height: 38,
+  },
+  profil_imgprofil: {
+    borderColor:"white",
+    top: 0,
+    left: 0,
+    width: '100%',
+    borderRadius:1000,
+    height: 100,
+  },
+  profil_imgautres: {
+    borderColor:"white",
+    top: -2.5,
+    left: 0,
+    width: '100%',
+    borderRadius:1000,
+    height: 55,
   },
   profil_imgcouverture: {
     position: 'absolute',
@@ -104,7 +152,6 @@ const styles = StyleSheet.create({
     height: '11%',
     borderRadius:1000,
     backgroundColor: 'grey',
-    
     
   },
   profil_textG: {
@@ -161,14 +208,14 @@ const styles = StyleSheet.create({
   profil_rond: {
     height:'50%',
     borderRadius: 1000,
-    backgroundColor: 'green',
+    backgroundColor: 'white',
     flex: 0.25,
     marginRight:'5%',
   },
   profil_rondPlus: {
     height:'50%',
     borderRadius: 1000,
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     flex: 0.25,
     marginRight:'5%',
   },
