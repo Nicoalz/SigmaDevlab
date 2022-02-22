@@ -29,13 +29,13 @@ export default function MainContainer(){
                     let iconName;
                     let rn= route.name;
 
-                    if (rn === 'TicketsScreen') {
+                    if (rn === 'Tickets') {
                         iconName = focused ? 'albums' : 'albums-outline'
-                    } else if (rn === 'HomeScreen') {
+                    } else if (rn === 'Accueil') {
                         iconName = focused ? 'home' : 'home-outline'
-                    } else if (rn === 'SearchScreen') {
+                    } else if (rn === 'Recherche') {
                         iconName = focused ? 'search' : 'search-outline'
-                    } else if (rn === 'ProfileScreen') {
+                    } else if (rn === 'Profil') {
                         iconName = focused ? 'person' : 'person-outline'
                     }
 
@@ -43,10 +43,10 @@ export default function MainContainer(){
                 },
             })}>
 
-                <Tab.Screen options={{headerShown: false}} name='TicketsScreen' component={TicketsScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='HomeScreen' component={HomeScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='SearchScreen' component={SearchScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='ProfileScreen' component={ProfileScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false}} name='Tickets' component={TicketsScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false}} name='Accueil' component={HomeScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false}} name='Recherche' component={SearchScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false}} name='Profil' component={ProfileScreenNavigator}/>
                 
 
             </Tab.Navigator>
