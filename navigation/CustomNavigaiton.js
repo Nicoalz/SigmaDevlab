@@ -7,6 +7,7 @@ import HomeScreen from './screens/HomeScreen';
 import SearchScreen from './screens/SearchScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import NestedScreen from './screens/NestedScreen';
+import RegisterScreen from './screens/RegisterScreen';
 
 
 const Stack = createStackNavigator()
@@ -64,4 +65,17 @@ const TicketsScreenNavigator = () => {
 }
 
 export {TicketsScreenNavigator}
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+const RegisterScreenNavigator = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen options={{headerShown: false}} name="Registerscreen" component={RegisterScreen} />
+            <Stack.Screen name="NestedScreen" component={NestedScreen} />
+        </Stack.Navigator>
+    )
+}
+
+export {RegisterScreenNavigator}
 

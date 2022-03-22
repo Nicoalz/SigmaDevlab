@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-import {HomeScreenNavigator, ProfileScreenNavigator, SearchScreenNavigator, TicketsScreenNavigator} from './CustomNavigaiton'
+import {HomeScreenNavigator, ProfileScreenNavigator, RegisterScreenNavigator, SearchScreenNavigator, TicketsScreenNavigator} from './CustomNavigaiton'
 
 // Screen names
 
@@ -37,6 +35,8 @@ export default function MainContainer(){
                         iconName = focused ? 'search' : 'search-outline'
                     } else if (rn === 'Profil') {
                         iconName = focused ? 'person' : 'person-outline'
+                    }else if (rn === 'Register') {
+                        iconName = focused ? 'login' : 'login-outline'
                     }
 
                     return <Ionicons name= {iconName} size={size} color={color} />
@@ -47,6 +47,7 @@ export default function MainContainer(){
                 <Tab.Screen options={{headerShown: false}} name='Accueil' component={HomeScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Recherche' component={SearchScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Profil' component={ProfileScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false}} name='Register' component={RegisterScreenNavigator}/>
                 
 
             </Tab.Navigator>
