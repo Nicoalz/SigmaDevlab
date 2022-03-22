@@ -44,6 +44,10 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.containerTri}>
         {/*Here we will return the view when state is true 
         and will return false if state is false*/}
+                <Button
+            title="Trier"
+            onPress={() => setShouldShow(!shouldShow)}
+        />
         {shouldShow ? (
             <Picker style={{alignSelf: 'stretch'}} selectedValue={selectedAxe}
             onValueChange={(itemValue, itemIndex) =>
@@ -58,10 +62,7 @@ export default function HomeScreen({ navigation }) {
             <Picker.Item label="CDEB" value="com" />
             </Picker>
         ) : null}
-        <Button
-            title="Trier"
-            onPress={() => setShouldShow(!shouldShow)}
-        />
+
         </View>
         </SafeAreaView  > 
 
