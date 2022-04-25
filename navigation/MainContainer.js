@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-import {HomeScreenNavigator, ProfileScreenNavigator, RegisterScreenNavigator, SearchScreenNavigator, TicketsScreenNavigator} from './CustomNavigaiton'
+import {HomeScreenNavigator, ProfileScreenNavigator, SearchScreenNavigator, TicketsScreenNavigator} from './CustomNavigaiton'
 
 // Screen names
 
@@ -23,7 +23,7 @@ export default function MainContainer(){
             <Tab.Navigator
             initialRouteName={homeName}
             screenOptions={({route}) => ({
-                tabBarIcon: ({focused, color, size}) => {
+                tabBarIcon: ({focused, size}) => {
                     let iconName;
                     let rn= route.name;
 
@@ -35,11 +35,9 @@ export default function MainContainer(){
                         iconName = focused ? 'search' : 'search-outline'
                     } else if (rn === 'Profil') {
                         iconName = focused ? 'person' : 'person-outline'
-                    }else if (rn === 'Register') {
-                        iconName = focused ? 'login' : 'login-outline'
                     }
 
-                    return <Ionicons name= {iconName} size={size} color={color} />
+                    return <Ionicons name= {iconName} size={size} color='#F48222' />
                 },
             })}>
 
@@ -47,7 +45,6 @@ export default function MainContainer(){
                 <Tab.Screen options={{headerShown: false}} name='Accueil' component={HomeScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Recherche' component={SearchScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Profil' component={ProfileScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='Register' component={RegisterScreenNavigator}/>
                 
 
             </Tab.Navigator>
