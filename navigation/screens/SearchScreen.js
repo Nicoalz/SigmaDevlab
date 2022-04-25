@@ -75,7 +75,6 @@ export default function SearchScreen({route, navigation }) {
 
 const styles = StyleSheet.create({
     search_h1: {
-      fontFamily:'Roboto',
       fontSize: 30,
       fontWeight: "bold",
       textAlign: 'center',

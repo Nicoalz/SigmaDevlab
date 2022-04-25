@@ -15,7 +15,7 @@ export default function TicketsScreen({ navigation }) {
 
 
     useEffect(() => {
-        fetch('http://192.168.0.45:1337/users/1',
+        fetch('http://localhost:1337/users/1',
             {
                 method: "GET",
                 headers: {
@@ -80,13 +80,13 @@ export default function TicketsScreen({ navigation }) {
                             usersEvent.favourites.map(favourite => {
                                 return (
 
-                                    <TouchableOpacity>
+                                    <TouchableOpacity key={favourite.title}>
                                         <View style={styles.container_ticket}>
                                             <Card.Title style={styles.card}
                                                 title={favourite.title}
                                                 subtitle={favourite.date}
                                             />
-                                            <Image style={styles.logo} source={{ uri: 'http://192.168.0.45:1337' + favourite.image.url }} />
+                                            <Image style={styles.logo} source={{ uri: 'http://localhost:1337' + favourite.image.url }} />
 
                                         </View>
                                     </TouchableOpacity>
@@ -100,13 +100,13 @@ export default function TicketsScreen({ navigation }) {
                             usersEvent.registered_events.map(registered => {
                                 return (
 
-                                    <TouchableOpacity>
+                                    <TouchableOpacity key={registered.title}>
                                         <View style={styles.container_ticket}>
                                             <Card.Title style={styles.card}
                                                 title={registered.title}
                                                 subtitle={registered.date}
                                             />
-                                            <Image style={styles.logo} source={{ uri: 'http://192.168.0.45:1337' + registered.image.url }} />
+                                            <Image style={styles.logo} source={{ uri: 'http://localhost:1337' + registered.image.url }} />
                                         </View>
                                     </TouchableOpacity>
                                 )
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     },
 
     h1: {
-        fontFamily: 'Roboto',
+        
         fontSize: 30,
         fontWeight: "bold",
         textAlign: 'center',

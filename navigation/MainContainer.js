@@ -41,7 +41,6 @@ export default function MainContainer(){
                 },
             })}>
 
-                <Tab.Screen options={{headerShown: false}} color='#FF8C00' name='Register' component={RegisterScreenNavigator}/> 
                 <Tab.Screen options={{headerShown: false}} name='Tickets' component={TicketsScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Accueil' component={HomeScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Recherche' component={SearchScreenNavigator}/>

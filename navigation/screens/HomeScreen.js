@@ -16,7 +16,7 @@ export default function HomeScreen({ navigation }) {
     var event_title ='';
 
     useEffect(() => {
-        fetch('http://192.168.0.45:1337/events',
+        fetch('http://localhost:1337/events',
         {
             method: "GET",
             headers: {
@@ -105,7 +105,8 @@ export default function HomeScreen({ navigation }) {
                         //display only dw events
                         if (event.axe == selectedAxe) {
                             return (
-                                <View style={styles.container}>
+                                <View style={styles.container} key={event.title}>
+
                                 <Card.Title
                                     title={axe_title}
                                     subtitle={event.location}
@@ -113,7 +114,7 @@ export default function HomeScreen({ navigation }) {
                                 <View style={styles.image}>
                                     <TouchableOpacity onPress={()=> navigation.navigate('NestedScreen', {eventname : event.title, eventid : event.id })}>
                                     <View style={styles.image_overlay}></View>
-                                    <Image style={styles.image} source={{uri:'http://192.168.0.45:1337' + event.image['url'] }} />
+                                    <Image style={styles.image} source={{uri:'http://localhost:1337' + event.image['url'] }} />
                                     </TouchableOpacity>
                                 </View>
                                 
@@ -127,7 +128,7 @@ export default function HomeScreen({ navigation }) {
                         else if (selectedAxe == null || selectedAxe == 'all') {
                             return (
                         
-                                <View style={styles.container}>
+                                <View style={styles.container} key={event.title}>
                                     <Card.Title
                                         title={axe_title}
                                         subtitle={event.location}
@@ -135,7 +136,7 @@ export default function HomeScreen({ navigation }) {
                                     <View style={styles.image}>
                                         <TouchableOpacity onPress={()=> navigation.navigate('NestedScreen', {eventname : event.title, eventid : event.id })}>
                                         <View style={styles.image_overlay}></View>
-                                        <Image style={styles.image} source={{uri:'http://192.168.0.45:1337' + event.image['url'] }} />
+                                        <Image style={styles.image} source={{uri:'http://localhost:1337' + event.image['url'] }} />
                                         </TouchableOpacity>
                                     </View>
                                     
@@ -178,7 +179,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     },
     h1: {
-        fontFamily:'Roboto',
         fontSize: 30,
         fontWeight: "bold",
         textAlign: 'center',
