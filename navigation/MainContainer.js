@@ -36,18 +36,19 @@ export default function MainContainer(){
                     } else if (rn === 'Profil') {
                         iconName = focused ? 'person' : 'person-outline'
                     }else if (rn === 'Register') {
-                        iconName = focused ? 'login' : 'login-outline'
+                        iconName = focused ? 'apps' : 'apps-outline'
                     }
 
-                    return <Ionicons name= {iconName} size={size} color={color} />
+                    return <Ionicons name= {iconName} size={size} color='#FF8C00' />
                 },
             })}>
 
+                <Tab.Screen options={{headerShown: false}} color='#FF8C00' name='Register' component={RegisterScreenNavigator}/> 
                 <Tab.Screen options={{headerShown: false}} name='Tickets' component={TicketsScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Accueil' component={HomeScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Recherche' component={SearchScreenNavigator}/>
                 <Tab.Screen options={{headerShown: false}} name='Profil' component={ProfileScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='Register' component={RegisterScreenNavigator}/>
+                
                 
 
             </Tab.Navigator>

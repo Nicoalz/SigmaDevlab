@@ -209,7 +209,7 @@ function RegisterScreen() {
 
                         var config = {
                             method: 'post',
-                            url: 'http://localhost:1337/users',
+                            url: 'http://192.168.0.45:1337/users',
                             headers: {
                                 'Content-Type': 'application/json'
                             },

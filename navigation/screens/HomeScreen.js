@@ -16,7 +16,7 @@ export default function HomeScreen({ navigation }) {
     var event_title ='';
 
     useEffect(() => {
-        fetch('http://localhost:1337/events',
+        fetch('http://192.168.0.45:1337/events',
         {
             method: "GET",
             headers: {
@@ -113,7 +113,7 @@ export default function HomeScreen({ navigation }) {
                                 <View style={styles.image}>
                                     <TouchableOpacity onPress={()=> navigation.navigate('NestedScreen', {eventname : event.title, eventid : event.id })}>
                                     <View style={styles.image_overlay}></View>
-                                    <Image style={styles.image} source={{uri:'http://localhost:1337' + event.image['url'] }} />
+                                    <Image style={styles.image} source={{uri:'http://192.168.0.45:1337' + event.image['url'] }} />
                                     </TouchableOpacity>
                                 </View>
                                 
@@ -135,7 +135,7 @@ export default function HomeScreen({ navigation }) {
                                     <View style={styles.image}>
                                         <TouchableOpacity onPress={()=> navigation.navigate('NestedScreen', {eventname : event.title, eventid : event.id })}>
                                         <View style={styles.image_overlay}></View>
-                                        <Image style={styles.image} source={{uri:'http://localhost:1337' + event.image['url'] }} />
+                                        <Image style={styles.image} source={{uri:'http://192.168.0.45:1337' + event.image['url'] }} />
                                         </TouchableOpacity>
                                     </View>
                                     

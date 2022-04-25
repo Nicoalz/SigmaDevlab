@@ -24,7 +24,7 @@ export default function ProfileScreen({ navigation }) {
             </View>
           </View>
     
-    
+     
           <View style={styles.profil_block}>
             <Text style={styles.profil_textP} >Evènement(s) passé(s) : </Text>
     
