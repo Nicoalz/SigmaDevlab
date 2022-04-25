@@ -41,10 +41,10 @@ export default function MainContainer(){
                 },
             })}>
 
-                <Tab.Screen options={{headerShown: false}} name='Tickets' component={TicketsScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='Accueil' component={HomeScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='Recherche' component={SearchScreenNavigator}/>
-                <Tab.Screen options={{headerShown: false}} name='Profil' component={ProfileScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false, tabBarActiveTintColor:'#F48222'}} name='Tickets' component={TicketsScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false, tabBarActiveTintColor:'#F48222'}} name='Accueil' component={HomeScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false, tabBarActiveTintColor:'#F48222'}} name='Recherche' component={SearchScreenNavigator}/>
+                <Tab.Screen options={{headerShown: false, tabBarActiveTintColor:'#F48222'}} name='Profil' component={ProfileScreenNavigator}/>
                 
 
             </Tab.Navigator>

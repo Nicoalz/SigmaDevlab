@@ -9,8 +9,6 @@ function RegisterScreen() {
 
     const [isRegistered, setIsRegistered] = React.useState(false);
 
-    const [isFormOk, setIsFormOk] = React.useState(false);
-
     const { control, setFocus, handleSubmit } = useForm({
         defaultValues: {
             username: '',
