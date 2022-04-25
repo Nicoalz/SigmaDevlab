@@ -9,7 +9,7 @@ export default function NestedScreen({route, navigation }) {
     
 
     useEffect(() => {
-        fetch('http://localhost:1337/events/' + eventid,
+        fetch('http://192.168.0.45:1337/events/' + eventid,
         {
             method: "GET",
             headers: {
@@ -33,7 +33,7 @@ export default function NestedScreen({route, navigation }) {
                     <View style={{flex: 1}}>
                         <View style={{ backgroundColor: 'rgba(52, 52, 52, 0.8)', alignSelf: 'stretch', height: 200 }}>
                             <ImageBackground
-                            source={{uri:'http://localhost:1337' + event.image['url'] }}
+                            source={{uri:'http://192.168.0.45:1337' + event.image['url'] }}
                             style={{width: '100%', height: '100%'}}
                             > 
                                 <View style={{ paddingLeft:20, paddingBottom:20, flex:1, justifyContent:'flex-end', backgroundColor: 'rgba(52, 52, 52, 0.5)', alignSelf: 'stretch', height: 200 }}>
