@@ -287,12 +287,10 @@ function RegisterScreen() {
                                 .then(function (response) {
                                     console.log(JSON.stringify(response.data));
                                     setIsRegistered(true);
-                                    setIsFormOk(true);
                                 })
                                 .catch(function (error) {
                                     console.log(error);
                                     setIsRegistered(false);
-                                    setIsFormOk(false);
                                 });
         
         
