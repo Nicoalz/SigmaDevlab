@@ -4,6 +4,7 @@ import { FormBuilder } from 'react-native-paper-form-builder';
 import { useForm } from 'react-hook-form';
 import { Button } from 'react-native-paper';
 import {ImageBackground, Image, TextInput, View, } from 'react-native';
+import { borderLeftColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 function RegisterScreen() {
 
@@ -276,7 +277,7 @@ function RegisterScreen() {
         
                             var config = {
                                 method: 'post',
-                                url: 'http://localhost:1337/users',
+                                url: 'http://192.168.0.45:1337/users',
                                 headers: {
                                     'Content-Type': 'application/json'
                                 },
@@ -297,7 +298,7 @@ function RegisterScreen() {
         
         
                         })}>
-                        Submit
+                        S'inscire
                     </Button>
         
         
@@ -327,11 +328,14 @@ const styles = StyleSheet.create({
     scrollViewStyle: {
         flex: 1,
         padding: 15,
+        marginTop: 90,
+        marginBottom: 40,
         justifyContent: 'center',
     },
     headingStyle: {
         fontSize: 30,
         textAlign: 'center',
+        fontWeight: 'bold',
         marginBottom: 40,
     },
     button: {
