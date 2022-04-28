@@ -15,7 +15,7 @@ export default function TicketsScreen({ navigation }) {
 
 
     useEffect(() => {
-        fetch('http://192.168.0.45:1337/users/1',
+        fetch('http://localhost:1337/users/1',
             {
                 method: "GET",
                 headers: {
@@ -86,7 +86,7 @@ export default function TicketsScreen({ navigation }) {
                                                 title={favourite.title}
                                                 subtitle={favourite.date}
                                             />
-                                            <Image style={styles.logo} source={{ uri: 'http://192.168.0.45:1337' + favourite.image.url }} />
+                                            <Image style={styles.logo} source={{ uri: 'http://localhost:1337' + favourite.image.url }} />
 
                                         </View>
                                     </TouchableOpacity>
@@ -106,7 +106,7 @@ export default function TicketsScreen({ navigation }) {
                                                 title={registered.title}
                                                 subtitle={registered.date}
                                             />
-                                            <Image style={styles.logo} source={{ uri: 'http://192.168.0.45:1337' + registered.image.url }} />
+                                            <Image style={styles.logo} source={{ uri: 'http://localhost:1337' + registered.image.url }} />
                                         </View>
                                     </TouchableOpacity>
                                 )

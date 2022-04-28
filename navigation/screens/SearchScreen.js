@@ -6,7 +6,7 @@ export default function SearchScreen({route, navigation }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [events, setEvents] = useState([]);
     const onChangeSearch = query => setSearchQuery(query);
-    const apiURL = 'http://192.168.0.45:1337/events';
+    const apiURL = 'http://loclahost:1337/events';
     const [shouldShow, setShouldShow] = useState(false);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ export default function SearchScreen({route, navigation }) {
                         <Card.Content >
                           <Title  key={event.id}>{event.title}</Title>
                           <Paragraph>{event.axe}</Paragraph>
-                          <Image style={styles.image} source={{uri:'http://192.168.0.45:1337' + event.image['url'] }} />
+                          <Image style={styles.image} source={{uri:'http://localhost:1337' + event.image['url'] }} />
                         </Card.Content>
                     </Card>
 
